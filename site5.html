@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft - Для бизнеса</title>
+    <style>
+        .head{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            width: 100%;
+            height: 50px;
+            background-color: white;
+        }
+        .img1{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+        }
+        .container{
+            display: flex;
+            width: 450px;
+            height: 50px;
+            text-align: center;
+
+        }
+        .a1{
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            position: relative;
+            bottom: 10px;
+            color: black;
+            text-decoration: none;
+            position: relative;
+            top: 8px;
+            font-size: small;
+        }
+        .a1:hover{
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+        }
+        .center{
+            width: 100%;
+            height: 700px;
+            display: flex;
+        }
+        .card{
+            width: 250px;
+            height: 300px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            border: 5px;
+            display: flex;
+            flex-direction: row;
+        }
+        .center2{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .i1{
+            width: 250px;
+            height: 300px;
+        }
+        .center3{
+            width: 100%;
+            height: 700px;
+            background-color: black;
+        }
+        .i2{
+            width: 100%;
+            height: 700px;
+        }
+        .c3{
+            position: relative;
+            top: 100px;
+            left: 430px;
+        }
+        
+        .center4{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+        
+        .center4-bg {
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            z-index: 0;
+            transition: right 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        
+        .center4-bg.active {
+            right: 0 !important;
+        }
+        
+        .center4-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            pointer-events: none;
+        }
+        
+        .center4-overlay.active {
+            opacity: 1;
+        }
+        
+        .card2{
+            width: 250px;
+            height: 300px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            border: 2px solid transparent;
+            transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            position: relative;
+            z-index: 2;
+            cursor: pointer;
+        }
+        
+        .card2.slide-out {
+            transform: translateX(-50px) scale(1.05) !important;
+            border: 4px solid black !important;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.3) !important;
+            background-color: #f8f8f8 !important;
+            z-index: 10 !important;
+        }
+        
+        .card2.dimmed {
+            opacity: 0.6 !important;
+            transform: scale(0.95) !important;
+        }
+        
+        .card2:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .card2:active {
+            transform: scale(0.98);
+        }
+        
+        .i3{
+            width: 250px;
+            height: 125px;
+        }
+        .col{
+            font-size: larger;
+            font-weight:600;
+            position: relative;
+            bottom: 10px;
+            left: 10px;
+        }
+        .col2{
+            font-size: larger;
+            font-weight: 600;
+            position: relative;
+            bottom: 30px;
+            left: 10px;
+        }
+        .col3{
+            font-size: x-small;
+            position: relative;
+            bottom: 40px;
+            left: 10px;
+        }
+        .col4{
+            font-size:x-small;
+            position: relative;
+            bottom: 50px;
+            left: 10px;
+        }
+        .b1{
+            width: 220px;
+            height: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0067b8;
+            color: white;
+            font-size:x-small;
+            border: none;
+            position: relative;
+            bottom: 40px;
+            left: 10px;
+            cursor: pointer;
+        }
+        .col5{
+            font-size: x-small;
+            position: relative;
+            bottom: 30px;
+            left: 10px;
+        }
+        .col6{
+            font-size: x-small;
+            position: relative;
+            bottom: 40px;
+            left: 10px;
+        }
+        .col7{
+            font-size: x-small;
+            position: relative;
+            bottom: 50px;
+            left: 10px;
+        }
+        .col8{
+            font-size: x-small;
+            position: relative;
+            bottom: 60px;
+            left: 10px;
+        }
+        .col9{
+            font-size: x-small;
+            position: relative;
+            bottom: 70px;
+            left: 10px;
+        }
+        .b2{
+            width: 220px;
+            height: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0067b8;
+            color: white;
+            font-size:x-small;
+            border: none;
+            position: relative;
+            bottom: 68px;
+            left: 10px;
+            cursor: pointer;
+        }
+        .b2:hover{
+            background-color: #004f85;
+        }
+        .b1:hover{
+            background-color: #004f85;
+        }
+        .col10{
+            font-size: x-small;
+            position: relative;
+            bottom: 40px;
+            left: 10px;
+        }
+        .col14{
+            font-size: larger;
+            font-weight:600;
+            position: relative;
+            bottom: 30px;
+            left: 10px;
+        }
+        .col11{
+            font-size: x-small;
+            position: relative;
+            bottom: 50px;
+            left: 10px;
+        }
+        .b3{
+            width: 220px;
+            height: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0067b8;
+            color: white;
+            font-size:x-small;
+            border: none;
+            position: relative;
+            bottom: 41px;
+            left: 10px;
+            cursor: pointer;
+        }
+        .b3:hover{
+            background-color: #004f85;
+        }
+        .b4{
+            width: 80px;
+            height: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0067b8;
+            color: white;
+            font-size:x-small;
+            border: none;
+            position: relative;
+            left: 10px;
+            top: 3px;
+            cursor: pointer;
+        }
+        .b4:hover{
+            background-color: #004f85;
+        }
+        .col12{
+          font-size: x-small;
+            position: relative;
+            bottom: 25px;
+            left: 10px;  
+        }
+        .col13{
+          font-size: x-small;
+            position: relative;
+            bottom: 35px;
+            left: 10px;  
+        }
+        .footer{
+            width: 100%;
+            height: 400px;
+        }
+        .stick{
+            height: 2px;
+            width: 200px;
+            background-color: violet;
+            position: relative;
+            top: 30px;
+        }
+        .circle{
+            height: 10px;
+            width: 10px;
+            border-radius: 100%;
+            background-color: green;
+            position: relative;
+            bottom: 3px;
+            cursor: grab;
+        }
+        .p1{
+            position: relative;
+            bottom: 15px;
+            right: 202px;
+        }
+        
+        .condition-indicator {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        
+        .key-hint {
+            text-align: center;
+            margin-top: 10px;
+            padding: 8px;
+            background: #0067b8;
+            color: white;
+            border-radius: 8px;
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .key-hint kbd {
+            background: #f5f5f5;
+            color: #333;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0 3px;
+        }
+        
+        @keyframes borderPulse {
+            0% {
+                border-color: black;
+            }
+            50% {
+                border-color: #333;
+            }
+            100% {
+                border-color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="head" id="head">
+        <a href="site5.html">
+            <img src="Снимок1.png" alt="">
+        </a>
+        <div class="container" id="container">
+            <a class="a1" href="">Microsoft 365</a>
+            <a class="a1" href="">Teams</a>
+            <a class="a1" href="">Windows</a>
+            <a class="a1" href="">Xbox</a>
+            <a class="a1" href="site6.html">Поддержка</a>
+        </div>
+        <div class="stick" id="trackWrapper">
+            <div class="circle" id="circle"></div>
+        </div>
+        <p class="p1" id="p1">Поменяйте яркость страницы</p>
+    </div>
+    <div class="center">
+        <img src="Снимок2.png" alt="">
+    </div>
+    <div class="center2">
+        <div class="card"><img class="i1" src="Снимок3.png" alt=""></div>
+        <div class="card"><img class="i1" src="Снимок4.png" alt=""></div>
+        <div class="card"><img class="i1" src="Снимок5.png" alt=""></div>
+        <div class="card"><img class="i1" src="Снимок6.png" alt=""></div>
+    </div>
+    <div class="center3">
+        <img class="i2" src="Снимок7.png" alt="">
+    </div>
+    <h1 class="c3" id="c3">Для бизнеса</h1>
+    
+    <div class="center4" id="center4">
+        <img class="center4-bg" id="bgImage1" src="Снимок26.png" alt="Background 1" style="z-index: 0;">
+        <img class="center4-bg" id="bgImage2" src="Снимок27.png" alt="Background 2" style="z-index: 0;">
+        <img class="center4-bg" id="bgImage3" src="Снимок28.png" alt="Background 3" style="z-index: 0;">
+        <img class="center4-bg" id="bgImage4" src="Снимок29.png" alt="Background 4" style="z-index: 0;">
+        
+        <div class="center4-overlay" id="bgOverlay"></div>
+        
+        <div class="card2" id="card2_1" data-card="1" data-bg="bgImage1"><img class="i3" src="Снимок8.png" alt="">
+            <p class="col">Получите Microsoft</p>
+            <p class="col2">Teams для бизнеса</p>
+            <p class="col3">Онлайн-собрание, чат и облачное</p>
+            <p class="col4">хранилище - все в одном приложении.</p>
+            <button class="b1" id="b1">Найдите подходящий план для бизнеса</button>
+        </div>
+        <div class="card2" id="card2_2" data-card="2" data-bg="bgImage2"><img class="i3" src="Снимок9.png" alt="">
+        <p class="col">Visual Studio 2022</p>
+            <p class="col5">Наиболее комплексная среда IDE для</p>
+            <p class="col6">разработчиков .NET и C++ на Windows для</p>
+            <p class="col7">создания веб-приложений, приложений для</p>
+            <p class="col8">ПК, облачных и мобильных приложений, а</p>
+            <p class="col9">также служб и игр.</p>
+            <button class="b2" id="b2">Скачайте Visual Studio 2022</button>
+        </div>
+        <div class="card2" id="card2_3" data-card="3" data-bg="bgImage3"><img class="i3" src="Снимок10.png" alt="">
+            <p class="col">Добро пожаловать в</p>
+            <p class="col14">Windows 365 Cloud PC</p>
+        <p class="col10">Работать с Windows в облаке Microsoft</p>
+        <p class="col11">теперь можно на любых устройствах</p>
+        <button class="b3" id="b3">Попробуйте прямо сейчас</button>
+        </div>
+        <div class="card2" id="card2_4" data-card="4" data-bg="bgImage4"><img class="i3" src="Снимок11.png" alt="">
+            <p class="col">Microsoft Edge</p>
+        <p class="col12">Производительность, своместивость,</p>
+        <p class="col13">безопасность. Браузер для бизнеса</p>
+        <button class="b4" id="b4">Скачать</button>
+        </div>
+    </div>   
+    <div class="footer">
+        <img src="Снимок12.PNG" alt="">
+    </div>
+
+    <script>
+        const circle = document.getElementById('circle');
+        const trackWrapper = document.getElementById('trackWrapper');
+        const card1 = document.getElementById('card2_1');
+        const card2 = document.getElementById('card2_2');
+        const card3 = document.getElementById('card2_3');
+        const card4 = document.getElementById('card2_4');
+        const button1 = document.getElementById('b1');
+        const button2 = document.getElementById('b2');
+        const button3 = document.getElementById('b3');
+        const button4 = document.getElementById('b4');
+        const header = document.getElementById('head');
+        const links = document.querySelectorAll('.a1');
+        const c3 = document.getElementById('c3');
+        const p1 = document.getElementById('p1');
+        
+        const bgImage1 = document.getElementById('bgImage1');
+        const bgImage2 = document.getElementById('bgImage2');
+        const bgImage3 = document.getElementById('bgImage3');
+        const bgImage4 = document.getElementById('bgImage4');
+        const allBgImages = [bgImage1, bgImage2, bgImage3, bgImage4];
+        const bgOverlay = document.getElementById('bgOverlay');
+        
+        const cards = [card1, card2, card3, card4];
+        const allCards = document.querySelectorAll('.card2');
+        
+        let isCardAnimating = false;
+        let currentActiveBg = null;
+        
+        const minLeft = 0;
+        const maxLeft = trackWrapper.offsetWidth - circle.offsetWidth;
+        
+        let isDragging = false;
+        let currentLeft = 0;
+        let startX = 0;
+        
+        function resetAllBackgrounds() {
+            allBgImages.forEach(bg => {
+                bg.classList.remove('active');
+                bg.style.right = '-100%';
+            });
+            bgOverlay.classList.remove('active');
+            bgOverlay.style.opacity = '0';
+        }
+        
+        function showBackgroundImage(bgElement) {
+            if (!bgElement) return;
+            
+            resetAllBackgrounds();
+            
+            bgElement.style.right = '-100%';
+            
+            setTimeout(() => {
+                bgElement.classList.add('active');
+                bgOverlay.classList.add('active');
+                currentActiveBg = bgElement;
+            }, 10);
+        }
+        
+        function slideCard(cardElement) {
+            if (isCardAnimating) return;
+            
+            
+            isCardAnimating = true;
+            
+            const bgId = cardElement.getAttribute('data-bg');
+            const bgElement = document.getElementById(bgId);
+            
+            if (bgElement) {
+                showBackgroundImage(bgElement);
+            }
+            
+            const otherCards = document.querySelectorAll('.card2:not(#' + cardElement.id + ')');
+            
+            allCards.forEach(card => {
+                card.classList.remove('slide-out');
+            });
+            
+            allCards.forEach(card => {
+                card.classList.remove('dimmed');
+            });
+            
+            cardElement.classList.add('slide-out');
+            
+            otherCards.forEach(card => {
+                card.classList.add('dimmed');
+            });
+            
+            cardElement.style.animation = 'borderPulse 0.5s ease';
+            setTimeout(() => {
+                cardElement.style.animation = '';
+            }, 500);
+            
+            console.log(`Активна карточка: ${cardElement.id}, фон: ${bgId}`);
+            
+            setTimeout(() => {
+                isCardAnimating = false;
+            }, 500);
+        }
+        
+        function getCurrentActiveCard() {
+            for (let card of cards) {
+                if (card.classList.contains('slide-out')) {
+                    return card;
+                }
+            }
+            return cards[0];
+        }
+        
+        circle.addEventListener('mousedown', function(event) {
+            isDragging = true;
+            startX = event.clientX;
+            currentLeft = parseInt(circle.style.left) || 0;
+            circle.style.cursor = 'grabbing';
+            event.preventDefault();
+        });
+        
+        window.addEventListener('mousemove', function(event){
+            if(isDragging){
+                const dx = event.clientX - startX;
+                let newLeft = currentLeft + dx;
+                newLeft = Math.max(minLeft, Math.min(maxLeft, newLeft));
+                circle.style.left = newLeft + 'px';
+                valueUpdate();
+            }
+        });
+        
+        window.addEventListener('mouseup', function() {
+            if (isDragging) {
+                isDragging = false;
+                circle.style.cursor = 'grab';
+            }
+        });
+        
+        function valueUpdate(){
+            const circleRect = circle.getBoundingClientRect();
+            let colorvalue = Math.floor(parseInt(circle.style.left) / 2);
+            const opacity = colorvalue / 100;
+            let colorvalue2 = Math.floor(255 * opacity);
+            let colorvalue3 = Math.floor(255 * (1 - opacity));
+            
+            document.body.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+            card1.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+            card2.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+            card3.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+            card4.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+
+            header.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+            links.forEach(link => {
+                link.style.color = `rgb(${colorvalue2}, ${colorvalue2}, ${colorvalue2})`;
+            });
+            p1.style.color = `rgb(${colorvalue2}, ${colorvalue2}, ${colorvalue2})`;
+
+            card1.style.borderColor = `rgba(0, 128, 0, ${opacity})`;
+            card2.style.borderColor = `rgba(0, 128, 0, ${opacity})`;
+            card3.style.borderColor = `rgba(0, 128, 0, ${opacity})`;
+            card4.style.borderColor = `rgba(0, 128, 0, ${opacity})`;
+
+            card1.style.color = `rgb(${colorvalue2}, ${colorvalue2}, ${colorvalue2})`;
+            card2.style.color = `rgb(${colorvalue2}, ${colorvalue2}, ${colorvalue2})`;
+            card3.style.color = `rgb(${colorvalue2}, ${colorvalue2}, ${colorvalue2})`;
+            card4.style.color = `rgb(${colorvalue2}, ${colorvalue2}, ${colorvalue2})`;
+            c3.style.color = `rgb(${colorvalue2}, ${colorvalue2}, ${colorvalue2})`;
+            
+            button1.style.color = `rgb(${colorvalue3}, ${colorvalue3}, ${colorvalue3})`;
+            button2.style.color = `rgb(${colorvalue3}, ${colorvalue3}, ${colorvalue3})`;
+            button3.style.color = `rgb(${colorvalue3}, ${colorvalue3}, ${colorvalue3})`;
+            button4.style.color = `rgb(${colorvalue3}, ${colorvalue3}, ${colorvalue3})`;
+        }
+        
+        valueUpdate();
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                
+                let currentCard = getCurrentActiveCard();
+                let nextCard;
+                
+                if (currentCard === card1) {
+                    nextCard = card2;
+                } else if (currentCard === card2) {
+                    nextCard = card3;
+                } else if (currentCard === card3) {
+                    nextCard = card4;
+                } else {
+                    nextCard = card1;
+                }
+                
+                slideCard(nextCard);
+            }
+            
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                
+                let currentCard = getCurrentActiveCard();
+                let prevCard;
+                
+                if (currentCard === card1) {
+                    prevCard = card4;
+                } else if (currentCard === card2) {
+                    prevCard = card1;
+                } else if (currentCard === card3) {
+                    prevCard = card2;
+                } else {
+                    prevCard = card3;
+                }
+                
+                slideCard(prevCard);
+            }
+        });
+        
+        allCards.forEach(card => {
+            card.addEventListener('click', function(event) {
+                if (event.target.tagName === 'BUTTON') {
+                    return;
+                }
+                
+                slideCard(this);
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            setTimeout(() => {
+                slideCard(card1);
+            }, 500);
+        });
+    </script>
+</body>
+</html>

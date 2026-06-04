@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Support</title>
+    <style>
+        .head{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            width: 100%;
+            height: 50px;
+            background-color:  white;
+        }
+        .img1{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .stick{
+            width: 2px;
+            height: 25px;
+            background-color: black;
+            position: relative;
+            top: 12px;
+            left: 5px;
+        }
+        .container{
+            display: flex;
+            width: 450px;
+            height: 50px;
+            text-align: center;
+
+        }
+        .a1{
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            position: relative;
+            bottom: 10px;
+            color: black;
+            text-decoration: none;
+            position: relative;
+            top: 5px;
+            font-size: small;
+            left: 30px;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .a2{
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            position: relative;
+            bottom: 11px;
+            color: black;
+            text-decoration: none;
+            position: relative;
+            top: 1px;
+            font-size:110%;
+            font-weight:bold;
+            left: 30px;
+        }
+        .a1:hover{
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+        }
+        .a2:hover{
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+        }
+        .center{
+            width: 100%;
+            height: 300px;
+        }
+        .center2{
+            width: 100%;
+            height: 150px;
+            background-color: #f2f2f2;
+        }
+        .container2{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .card{
+            width: 90px;
+            height: 90px;
+            background-color: #f2f2f2;
+            position: relative;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .i1{
+            width: 60px;
+            height: 60px;
+            position: relative;
+        }
+        .a3{
+            font-size:75%;
+            font-weight: bold;
+            position: relative;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+        }
+        .card2{
+            width: 120px;
+            height: 90px;
+            background-color: #f2f2f2;
+            position: relative;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .a4{
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 80%;
+            color: #006db3;
+            text-decoration: none;
+            letter-spacing: 1.2px;
+            position: relative;
+            top: 15px;
+            left: 370px;
+        }
+        .a4:hover{
+            text-decoration: underline;
+        }
+        .container3{
+            width: 100%;
+        }
+        .center3{
+            width: 100%;
+            height: 350px;
+            background-color: white;
+            position: relative;
+            bottom: 27px;
+        }
+        .p1{
+            font-weight: 600;
+            font-size: 170%;
+            position: relative;
+            top: 50px;
+            text-align: center;
+        }
+        .card3{
+            width: 360px;
+            height: 200px;
+            position: relative;
+            top: 90px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .card4{
+            width: 300px;
+            height: 200px;
+            position: relative;
+            top: 90px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-left: 25px;
+        }
+        .card5{
+            width: 380px;
+            height: 200px;
+            position: relative;
+            top: 90px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .a5{
+            font-size:110%;
+            font-weight: bold;
+        }
+        .a6{
+            font-size:100%;
+            position: relative;
+            top: 15px;
+            text-decoration: none;
+            color: #2982ac;
+        }
+        .a6:hover{
+            text-decoration: underline;
+        }
+        .center4{
+            width: 100%;
+            height: 350px;
+            background-color: #f2f2f2;
+            position: relative;
+            top: 159px;
+        }
+        .a7{
+            font-weight: 600;
+            font-size: 170%;
+            position: relative;
+            top: 25px;
+            text-align: center;
+        }
+        .i2{
+            width: 270px;
+            height: 170px;
+            position: relative;
+            top: 15px;
+            left: 305px;
+        }
+        .a8{
+            font-size:110%;
+            font-weight: bold;
+            position: relative;
+            left: 595px;
+            bottom: 179px;
+        }
+        .a9{
+            font-size:110%;
+            font-weight: bold;
+            position: relative;
+            left: 595px;
+            bottom: 195px;
+        }
+        .a10{
+            font-size: 85%;
+            position: relative;
+            left: 595px;
+            bottom: 205px;
+        }
+        .a11{
+            font-size: 85%;
+            position: relative;
+            left: 595px;
+            bottom: 218px;
+        }
+        .a12{
+            font-size: 85%;
+            position: relative;
+            left: 595px;
+            bottom: 232px;
+        }
+        .a13{
+            font-size: 85%;
+            position: relative;
+            left: 595px;
+            bottom: 245px;
+        }
+        .a14{
+            font-size: 85%;
+            position: relative;
+            left: 595px;
+            bottom: 259px;
+        }
+        .container4{
+            width: 290px;
+            height: 70px;
+            position: relative;
+            left: 595px;
+            bottom: 260px;
+        }
+        .a15{
+            color: #006db3;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 90%;
+            font-weight: 600;
+        }
+        .a15:hover{
+            text-decoration: underline;
+        }
+        .i3{
+            width: 270px;
+            height: 170px;
+            position: relative;
+            left: 965px;
+            bottom: 487px;
+        }
+        .a16{
+            font-size:110%;
+            font-weight: bold;
+            position: relative;
+            left: 1255px;
+            bottom: 681px;
+        }
+        .a17{
+            font-size: 85%;
+            position: relative;
+            left: 1255px;
+            bottom: 685px;
+        }
+        .a18{
+            font-size: 85%;
+            position: relative;
+            left: 1255px;
+            bottom: 699px;
+        }
+        .a19{
+            font-size: 85%;
+            position: relative;
+            left: 1255px;
+            bottom: 713px;
+        }
+        .container5{
+            width: 310px;
+            height: 70px;
+            position: relative;
+            left: 1255px;
+            top: 15px;
+        }
+        .center5{
+            width: 100%;
+            height: 500px;
+            background-color: white;
+        }
+        .i4{
+            width: 625px;
+            height: 335px;
+            position: relative;
+            top: 100px;
+            left: 300px;
+        }
+        .a20{
+            font-weight: 600;
+            font-size: 170%;
+            position: relative;
+            left: 955px;
+            bottom: 265px;
+        }
+        .a21{
+            font-weight: 600;
+            font-size: 170%;
+            position: relative;
+            left: 955px;
+            bottom: 290px;
+        }
+        .a22{
+            font-size: 85%;
+            position: relative;
+            left: 955px;
+            bottom: 295px;
+        }
+        .a23{
+            font-size: 85%;
+            position: relative;
+            left: 955px;
+            bottom: 308px;
+        }
+        .container6{
+            width: 650px;
+            position: relative;
+            left: 955px;
+            bottom: 255px;
+        }
+        .button1{
+            background-color: #0067b8;
+            color: white;
+            font-weight: 600;
+            font-size: 80%;
+            position: relative;
+            height: 35px;
+            width: 220px;
+            letter-spacing: 1.1px;
+            left: 955px;
+            bottom: 255px;
+            border-color: #0067b8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .a24{
+            color: white;
+            font-weight: 600;
+            font-size: 80%;
+            height: 35px;
+            width: 250px;
+            letter-spacing: 1.1px;
+            text-align: center;
+            position: relative;
+            top: 10px;
+            text-decoration: none;
+        }
+        .container7{
+            width: 100%;
+            height: 530px;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            background-color: rgb(49, 39, 39);
+            position: relative;
+            overflow: hidden;
+        }
+        .slider-container {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+            height: 100%;
+        }
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .arrow-btn, .arrow-btn2 {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor: pointer;
+            font-size: 40px;
+            color: white;
+            padding: 10px 15px;
+            margin: 0 10px;
+            border-radius: 50%;
+            transition: all 0.3s;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .arrow-btn {
+            right: 20px;
+        }
+        .arrow-btn2 {
+            left: 20px;
+        }
+        .arrow-btn:hover, .arrow-btn2:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+        .circles-container {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        .circle {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .circle.active {
+            background-color: white;
+            transform: scale(1.2);
+        }
+        .circle:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <a href="site5.html">
+            <img src="Снимок1.png" alt="">
+        </a>
+        <div class="stick"></div>
+        <div class="container">
+            <a class="a2" href="">Поддержка</a>
+            <a class="a1" href="">Office</a>
+            <a class="a1" href="">Продукты</a>
+            <a class="a1" href="">Устройства</a>
+            <a class="a1" href="site7.html">О нас</a>
+        </div>
+    </div>
+    <div class="center">
+            <img src="Снимок13.PNG" alt="">
+        </div>
+        <div class="center2">
+            <div class="container2">
+                <div class="card">
+                    <img class="i1" src="Снимок14.PNG" alt="">
+                    <a class="a3" href="">Microsoft 365</a>
+                </div>
+                <div class="card">
+                    <img class="i1" src="Снимок15.PNG" alt="">
+                    <a class="a3" href="">Outlook</a>
+                </div>
+                <div class="card">
+                    <img class="i1" src="Снимок16.PNG" alt="">
+                    <a class="a3" href="">OneDrive</a>
+                </div>
+                <div class="card">
+                    <img class="i1" src="Снимок17.PNG" alt="">
+                    <a class="a3" href="">Windows</a>
+                </div>
+                <div class="card2">
+                    <img class="i1" src="Снимок18.PNG" alt="">
+                    <a class="a3" href="">Microsoft Copilot</a>
+                </div>
+                <div class="card2">
+                    <img class="i1" src="Снимок19.PNG" alt="">
+                    <a class="a3" href="">Устроитсва Surface</a>
+                </div>
+                <div class="card">
+                    <img class="i1" src="Снимок20.PNG" alt="">
+                    <a class="a3" href="">Игры</a>
+                </div>
+                <div class="card2">
+                    <img class="i1" src="Снимок21.PNG" alt="">
+                    <a class="a3" href="">Microsoft Teams</a>
+                </div>
+                <div class="card">
+                    <img class="i1" src="Снимок22.PNG" alt="">
+                    <a class="a3" href="">Microsoft Store</a>
+                </div>
+            </div>
+        <a class="a4" href="">ДРУГИЕ ПРОДУКТЫ МАЙКРОСОФТ</a>
+        </div>
+        <div class="center3">
+            <p class="p1">Популярные разделы</p>
+            <div class="container2">
+                <div class="card5">
+                    <p class="a5">Microsoft 365</p>
+                    <a class="a6" href="">Установка Microsoft 365</a>
+                    <a class="a6" href="">Вход в Microsoft 365</a>
+                    <a class="a6" href="">Управление платежами и выставлением счетов</a>
+                </div>
+                <div class="card3">
+                    <p class="a5">Учетная запись Майкрософт и хранилище</p>
+                    <a class="a6" href="">Как войти в учетную запис Макрософт</a>
+                    <a class="a6" href="">Изминение пароля учетной записи Майкрософт</a>
+                    <a class="a6" href="">Как работает хранилище Майкрософт?</a>
+                </div>
+                <div class="card4">
+                    <p class="a5">Активация</p>
+                    <a class="a6" href="">Активация Office</a>
+                    <a class="a6" href="">Активация Windows</a>
+                    <a class="a6" href="">Как найти ключ продукта Windows</a>
+                </div>
+                <div class="card3">
+                    <p class="a5">Windows и устройства</p>
+                    <a class="a6" href="">Требования к системе для Windows 11</a>
+                    <a class="a6" href="">Окончание поддержки Windows 10</a>
+                    <a class="a6" href="">Поиск гарантии на оборудование</a>
+                </div>
+        </div>
+        <div class="center4">
+            <p class="a7">Обзор</p>
+            <img class="i2" src="Снимок24.avif" alt="">
+            <p class="a8">Приложение для продуктивной работы</p>
+            <p class="a9">дома и на работе на основе ИИ</p>
+            <p class="a10">Можно задавать вопросы решению Copilot,</p>
+            <p class="a11">создавать контент и черновики, а также</p>
+            <p class="a12">получать доступ к вашим любимым</p>
+            <p class="a13">приложениям и контенту из единого</p>
+            <p class="a14">расположения.</p>
+            <div class="container4">
+                <a class="a15" href="">УЗНАЙТЕ, ЧТО МОЖНО СДЕЛАТЬ С ПОМОЩЬЮ ПРИЛОЖЕНИЯ MICROSOFT COPILOT</a>
+            </div>
+            <img class="i3" src="Снимок23.avif" alt="">
+            <p class="a16">Для владельцев малого бизнеса</p>
+            <p class="a17">Найдите сведения, необходимые для создания,</p>
+            <p class="a18">запуска и развития малого бизнеса с помощью</p>
+            <p class="a19">Microsoft 365.</p>
+        </div>
+        <div class="container5">
+                <a class="a15" href="">ПОСЕТИТЬ РАЗДЕЛ "ПОМОЩЬ И ОБУЧЕНИЕ ДЛЯ МАЛОГО БИЗНЕСА"</a>
+            </div>
+        <div class="center5">
+            <img class="i4" src="Снимок25.avif" alt="">
+            <p class="a20">Повышение личной производительности c</p>
+            <p class="a21">помощью ИИ</p>
+            <p class="a22">Copilot в Microsoft 365 теперь помогает вам эффективнее использовать приложения, которые вы</p>
+            <p class="a23">используете каждый день.</p>
+            <div class="button1">
+                <a class="a24" href="">ПОЛУЧИТЬ MICROSOFT 365</a>
+            </div>
+        </div>
+        <div class="container6">
+                <a class="a15" href="">УЗНАТЬ БОЛЬШЕ О ВАШЕ НОВОМ НАБОРЕ ПРИЛОЖЕНИЙ ДЛЯ ПРОДУКТИВНОЙ РАБОТЫ НА БАЗЕ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА</a>
+            </div>
+
+    <div class="container7">
+        <button class="arrow-btn2" onclick="prevSlide()">←</button>
+        <div class="slider-container">
+            <div class="slides" id="slides">
+                <img src="Снимок24.avif" alt="Slide 1" class="slide">
+                <img src="Снимок23.avif" alt="Slide 2" class="slide">
+                <img src="Снимок25.avif" alt="Slide 3" class="slide">
+            </div>
+        </div>
+        <button class="arrow-btn" onclick="nextSlide()">→</button>
+        <div class="circles-container" id="circlesContainer"></div>
+    </div>
+
+    <script>
+        const images = [
+            "Снимок24.avif",
+            "Снимок23.avif",
+            "Снимок25.avif"
+        ];
+        
+        let currentIndex = 0;
+        const slidesContainer = document.getElementById('slides');
+        const circlesContainer = document.getElementById('circlesContainer');
+        let autoSlideInterval;
+        
+        function createSlides() {
+            slidesContainer.innerHTML = '';
+            images.forEach((img, index) => {
+                const slide = document.createElement('img');
+                slide.src = img;
+                slide.alt = `Slide ${index + 1}`;
+                slide.className = 'slide';
+                slidesContainer.appendChild(slide);
+            });
+        }
+        
+        function createCircles() {
+            circlesContainer.innerHTML = '';
+            images.forEach((_, index) => {
+                const circle = document.createElement('div');
+                circle.className = 'circle';
+                if (index === currentIndex) circle.classList.add('active');
+                circle.onclick = () => goToSlide(index);
+                circlesContainer.appendChild(circle);
+            });
+        }
+        
+        function updateActiveCircle() {
+            const circles = document.querySelectorAll('.circle');
+            circles.forEach((circle, index) => {
+                if (index === currentIndex) {
+                    circle.classList.add('active');
+                } else {
+                    circle.classList.remove('active');
+                }
+            });
+        }
+        
+        function goToSlide(index) {
+            if (index < 0) index = images.length - 1;
+            if (index >= images.length) index = 0;
+            
+            currentIndex = index;
+            const offset = -currentIndex * 100;
+            slidesContainer.style.transform = `translateX(${offset}%)`;
+            updateActiveCircle();
+            
+            resetAutoSlide();
+        }
+        
+        function nextSlide() {
+            goToSlide(currentIndex + 1);
+        }
+        
+        function prevSlide() {
+            goToSlide(currentIndex - 1);
+        }
+        
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                nextSlide();
+            }, 5000);
+        }
+        
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+        
+        function initSlider() {
+            createSlides();
+            createCircles();
+            startAutoSlide();
+        }
+        
+        initSlider();
+        
+        document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevSlide();
+    } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        nextSlide();
+    }
+});
+    </script>
+</body>
+</html>
