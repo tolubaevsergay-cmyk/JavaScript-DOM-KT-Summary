@@ -193,14 +193,31 @@
         }
         .footer {
             background: #f5f5f5;
-            padding: 40px 20px;
-            text-align: center;
-            border-top: 1px solid #ddd;
+            padding: 48px 24px 32px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 12px;
+            color: #616161;
+            transition: background 0.05s linear, color 0.05s linear;
         }
 
-        .footer img {
-            max-width: 100%;
-            height: auto;
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-col p {
+            margin-top: 8px;
+            transition: color 0.05s linear;
+        }
+
+        .footer-logo {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -208,7 +225,7 @@
 
 <header class="header">
     <div class="header-container">
-        <div class="logo"><a href="index.html"><img src="Снимок1.PNG" alt="" ></a></div>
+        <div class="logo"><a href="site5.html"><img src="Снимок1.PNG" alt="" ></a></div>
         <div class="nav">
             <a href="#">О нас</a>
             <a href="#">Компания</a>
@@ -258,8 +275,24 @@
 </main>
 
 <footer class="footer">
-    <img src="Снимок12.PNG" alt="Footer content">
-</footer>
+        <div class="footer-inner">
+            <div class="footer-col">
+                <strong>Следите за новинками</strong>
+                <p>Microsoft 365 · Surface · Xbox · Windows 11</p>
+            </div>
+            <div class="footer-col">
+                <strong>Поддержка</strong>
+                <p>Вопросы и ответы · Возвраты · Помощь с продуктами</p>
+            </div>
+            <div class="footer-col">
+                <strong>Компания</strong>
+                <p>Вакансии · О Microsoft · Политика конфиденциальности</p>
+            </div>
+        </div>
+        <div class="footer-logo">
+            <p>© Microsoft 2026 — Все права защищены. Официальная домашняя страница.</p>
+        </div>
+    </footer>
 <script>
     document.addEventListener('contextmenu', (e) => {
     const oldMenu = document.getElementById('custom-context-menu');
